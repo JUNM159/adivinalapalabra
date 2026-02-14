@@ -19,7 +19,7 @@ const jugadores = {
         palabra: "CARIÑOSA",
         pista: "Una característica que solo pocos conocen: todos piensas que eres alguien seria o amargada e incluso tu  dices tener poca batería social, siempre haces el esfuerzo de dar lo mejor de ti para que la pasemos bien. Para mí, tú eres alguien:",
         carpetaImagen: "imagenes/karla/",
-        final: "Karla.html"
+        final: "karla.html"
     }
     
 };
@@ -224,3 +224,4 @@ function mostrarBotonFinal(){
     document.getElementById("message").appendChild(btn);
 
 }
+
