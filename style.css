@@ -1,0 +1,260 @@
+/* ==========================
+   RESET BÁSICO
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fce4ec;
+}
+
+/* ==========================
+   CONTENEDOR PRINCIPAL
+========================== */
+#game-container {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ==========================
+   TITULO
+========================== */
+#game-title {
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   IMAGEN Y CAPAS
+========================== */
+#image-container {
+    display: grid;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+
+
+/* Capas */
+.layer {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    pointer-events: none;
+}
+
+.layer.shown {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ==========================
+   PREGUNTAS
+========================== */
+#question-container {
+    margin-top: 10px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#question-text {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* ==========================
+   OPCIONES
+========================== */
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: f8bbd0;
+    transition: transform 0.2s, background-color 0.2s ease;
+}
+.option-btn:hover {
+    transform: scale(1.03);
+}
+
+.option-btn:active {
+    transform: scale(0.97);
+}
+
+/* ==========================
+   RESULTADO Y GANADOR
+========================== */
+#result-container,
+#winner-container {
+    margin-top: 20px;
+}
+
+/* ==========================
+   BOTONES FINALES
+========================== */
+#restart-btn,
+#winner-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ==========================
+   FINAL.HTML
+========================== */
+#final-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#final-image {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#final-message {
+    font-size: 18px;
+}
+
+#play-again-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #b3aeae;
+}
+
+#play-again-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==========================
+   UTILIDADES
+========================== */
+.hidden {
+    display: none;
+}
+#menu-container {
+    text-align: center;
+}
+
+#menu-container button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#letter-input {
+    padding: 8px;
+    margin-top: 10px;
+}
+#word-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.letter-box {
+    width: 40px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    border-bottom: 3px solid black;
+    outline: none;
+    background: transparent;
+}
+
+#hint-text {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#final-btn{
+    margin-top:15px;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    background:#f48fb1;
+    color:white;
+    transition:0.3s;
+}
+
+#final-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= BOTONES GENERALES ================= */
+
+.game-btn{
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    background: linear-gradient(135deg,#f48fb1,#ec407a);
+    color:white;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.game-btn:hover{
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.game-btn:active{
+    transform: scale(0.97);
+}

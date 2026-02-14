@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivina la Palabra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= MENU ================= -->
+<div id="menu-container">
+    <h2>¿ Quién eres bro ?</h2>
+
+    <div id="players-container">
+    <button class="game-btn" onclick="selectPlayer(1)">Kristel</button>
+    <button class="game-btn" onclick="selectPlayer(2)">Besti</button>
+    <button class="game-btn" onclick="selectPlayer(3)">Kkma</button>
+    </div>
+
+
+    <div id="password-section" class="hidden">
+        <p>Ingresa la contraseña:</p>
+        <input type="password" id="password-input">
+        <button class="game-btn" onclick="checkPassword()">Entrar</button>
+        <p id="password-error"></p>
+    </div>
+</div>
+
+<!-- ================= JUEGO ================= -->
+<div id="game-container" class="hidden">
+
+    <h1>Adivina la palabra</h1>
+
+    <!-- PISTA -->
+    <p id="hint-text"></p>
+
+    <!-- IMAGEN -->
+    <div id="image-container"></div>
+
+    <!-- ESPACIOS DE LETRAS -->
+    <div id="word-container"></div>
+
+    <button class="game-btn" onclick="guess()">Adivinar</button>
+
+    <p id="message"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
